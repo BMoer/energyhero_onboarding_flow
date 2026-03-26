@@ -1,0 +1,153 @@
+.card {
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.optionLabel {
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  padding: 20px 24px;
+  align-items: center;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.priceLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.priceValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.1;
+}
+
+.detailsToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  padding: 4px 0;
+}
+
+.detailsToggle:hover {
+  color: var(--color-primary-dark);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.featureActive {
+  color: var(--color-navy);
+}
+
+.featureInactive {
+  color: var(--color-text-light);
+  text-decoration: line-through;
+}
+
+.featureIcon {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.featureActive .featureIcon {
+  color: var(--color-primary);
+}
+
+.featureInactive .featureIcon {
+  color: var(--color-text-light);
+}
+
+.selectSection {
+  display: flex;
+  align-items: center;
+}
+
+.selectBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.selectBtn:hover {
+  background: var(--color-primary-light);
+}
+
+.selectCheck {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Details */
+.details {
+  border-top: 1px solid var(--color-border);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color-bg);
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.detailRow strong {
+  color: var(--color-navy);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardBody {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
